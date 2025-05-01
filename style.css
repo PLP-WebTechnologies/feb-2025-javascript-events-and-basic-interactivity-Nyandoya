@@ -1,0 +1,214 @@
+/* Base styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #acadce;
+}
+
+h1, h2 {
+    color: #469759;
+}
+
+h3, h4 {
+    color: #45b7d1;
+}
+section {
+    background: rgb(8, 14, 73);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Event Handling Section */
+.event-box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 20px;
+}
+
+.event-demo {
+    padding: 15px;
+    border: 1px solid #79bfcb;
+    border-radius: 5px;
+    min-width: 200px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+#clickDemo {
+    background-color: #246a9a;
+    color: rgb(88, 24, 88);
+    cursor: pointer;
+}
+
+#hoverDemo {
+    background-color: #239151;
+    color: violet;
+}
+
+#keypressDemo {
+    background-color: #8d2418;
+    color: white;
+    padding: 10px;
+}
+
+#secretDemo {
+    background-color: #6d2887;
+    color: white;
+    cursor: pointer;
+    position: relative;
+}
+
+.secret-message {
+    display: none;
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: cyan;
+    color: rgb(28, 12, 81);
+    padding: 5px 10px;
+    border-radius: 5px;
+    white-space: nowrap;
+}
+
+/* Interactive Elements Section */
+.color-changer {
+    background-color: #855913;
+    color: rgb(55, 23, 29);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.gallery {
+    display: flex;
+    gap: 10px;
+    margin: 20px 0;
+    overflow-x: auto;
+    padding-bottom: 10px;
+}
+
+.gallery img {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.gallery img:hover {
+    transform: scale(1.35);
+}
+
+.tab-container {
+    margin-top: 20px;
+}
+
+.tab-buttons {
+    display: flex;
+    border-bottom: 1px solid #ddd;
+}
+
+.tab-btn {
+    padding: 10px 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s;
+}
+
+.tab-btn.active {
+    background-color: #3498db;
+    color: rgb(93, 41, 128);
+    border-radius: 5px 5px 0 0;
+}
+
+.tab-content {
+    padding: 20px;
+    border: 1px solid #3498db;
+    border-top: none;
+    border-radius: 0 0 5px 5px;
+    display: none;
+}
+
+.tab-content p {
+    margin: 0;
+    color: rgb(60, 128, 61)
+}
+.tab-content.active {
+    display: block;
+    animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Form Validation Section */
+.form-group {
+    margin-bottom: 15px;
+    color:#2ecc71;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #464242;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.error {
+    color: #e74c3c;
+    font-size: 14px;
+    margin-top: 5px;
+    display: none;
+}
+
+.success {
+    color: #2ecc71;
+    font-size: 14px;
+    margin-top: 5px;
+    display: none;
+}
+
+#submitBtn {
+    background-color: #1f7e47;
+    color: cyan;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+#submitBtn:hover {
+    background-color: #2980b9;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .event-box {
+        flex-direction: column;
+    }
+}
